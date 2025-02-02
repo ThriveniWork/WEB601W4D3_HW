@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Pet Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <header style="font-size: 60px; color: #fff">My Pet Collection</header>
+        <!-- Begin Navigation--->
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="adoption_info.html">Adoption Info</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="registration.html">Pet Registration</a></li>
+            </ul>
+        </nav>
+        <!--End Main Navigation  -->
+        <main>
+            <h1>Our Loving Pets</h1>
+            <ul id="photo">
+                <!-- Images will be dynamically added here -->
+           <!--    <img src="images/picture1.jpeg" alt = "Picture 1" class="photo">
+                <img src="images/picture2.jpeg" alt = "Picture 2" class="photo">
+                <img src="images/picture3.jpeg" alt = "Picture 3" class="photo"> 
+                <img src="images/picture4.jpeg" alt = "Picture 4" class="photo">
+                <img src="images/picture5.jpeg" alt = "Picture 5" class="photo">
+                <img src="images/picture6.jpeg" alt = "Picture 6" class="photo">
+                <img src="images/picture7.jpeg" alt = "Picture 7" class="photo">
+                <img src="images/picture8.jpeg" alt = "Picture 8" class="photo">
+                <img src="images/picture9.jpeg" alt = "Picture 9" class="photo">
+                <img src="images/picture10.jpeg" alt = "Picture 10" class="photo">-->
+            </ul>
+        </main>
+        <!-- Info Box -->
+        <div id="info-box">
+            <h2 id="info-heading"></h2>
+            <p id="info-text"></p>
+            <a href="#" id="close-info">Close</a>
+        </div>
+    <footer>&copy; Copyright 2025</footer>
+
+    <script>
+        var photos = [];
+        var fileNames = [];
+        var captionTexts = [
+            "Fluffy the cat",
+            "Buddy the dog",
+            "Goldie the fish",
+            "Chirpy the bird",
+            "Speedy the turtle",
+            "Bella the rabbit",
+            "Milo the hamster",
+            "Daisy the cow",
+            "Coco the parrot",
+            "Max the horse"
+        ];
+
+        var descTexts = [
+            "Fluffy loves naps and sunny spots!",
+            "Buddy enjoys long walks and belly rubs!",
+            "Goldie loves swimming in her tank!",
+            "Chirpy has the sweetest songs!",
+            "Speedy may be slow, but he is steady!",
+            "Bella loves hopping around the garden!",
+            "Milo is always running in his wheel!",
+            "Daisy loves grazing in the meadow!",
+            "Coco can mimic anything you say!",
+            "Max is a majestic horse!"
+        ];
+        var infoTexts = [
+            "Fluffy is a 3-year-old Persian cat who enjoys lounging in the sun.",
+            "Buddy is a golden retriever that loves playing fetch and running in the park.",
+            "Goldie is a beautiful goldfish who enjoys swimming in a peaceful aquarium.",
+            "Chirpy is a bright yellow canary with a sweet, melodic song.",
+            "Speedy is a small but wise turtle, living up to his name with a slow but steady nature.",
+            "Bella is a cute bunny who loves nibbling on carrots and hopping around happily.",
+            "Milo, the tiny hamster, enjoys running in his wheel all night long.",
+            "Daisy is a friendly cow that loves grazing in open fields.",
+            "Coco is a clever parrot who can mimic words and loves interacting with people.",
+            "Max is a strong and beautiful horse that enjoys galloping freely."
+        ];
+
+        var imageList = [];
+        var image = [];
+        var openList = "<li id='photo";
+        var openCaptionTag = "<div class='caption'>";
+        var closeCaptionTag = "</div>";
+        var openDescTag = "<div class='description'>";
+        var closeDescTag = "</div>";
+
+        for (var i = 0; i < 10; i++) {
+            fileNames.push("picture" + (i + 1));
+            photos.push("<img src='images/" + fileNames[i] + ".jpeg' alt='Picture "+(i+1)+"'>");
+            image = openList + (i + 1) + "'>" + photos[i] + openCaptionTag + captionTexts[i] + closeCaptionTag + openDescTag + descTexts[i] + closeDescTag + "</li>";
+            imageList.push(image);
+        }
+
+        document.getElementById("photo").innerHTML = imageList.join("");
+
+        document.querySelectorAll(".description").forEach((desc, index) => {
+            desc.addEventListener("click", function() {
+                document.getElementById("info-heading").innerText = captionTexts[index];
+                document.getElementById("info-text").innerText = infoTexts[index];
+                document.getElementById("info-box").style.visibility = "visible";
+            });
+        });
+
+        // Close the Info Box
+        document.getElementById("close-info").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("info-box").style.visibility = "hidden";
+        });
+    </script>
+</body>
+</html>

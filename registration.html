@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>Local Pet Adoption Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <img src="images/happy_paw.png" alt="Happy Paws Logo" width="150">
+            <h1>Welcome to Happy Paws Pet Adoption</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="adoption_info.html">Adoption Info</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="registration.html">Pet Registration</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <img src="images/pet_adoption.jpeg" alt="Adopted Pets Celebration" width="600">
+            
+            <form action="/Contact" method="post">
+                <h2>If you would love to Adopt</h2>
+                <fieldset>
+                    <legend>Please fill out this form</legend>
+                    <label>Enter your full name</label>
+                    <input type ="text" name = "name" />
+                    <div class="selectmenu">
+                        <label>How should we contact you?</label>  
+                        <select>
+                            <option>Email</option>
+                            <option>Phone</option>
+                        </select>
+                    </div>
+                    <label>Please enter your email</label>
+                    <input type = "text" name = "phone" />
+                    <label>Please enter your phone number</label>
+                    <input type = "text" name = "phone" />
+                    <br><label>What specific breed would you like to adopt?</label>
+                    <input type = "radio" name = "Breed" value ="Golden Retriever"/>Golden Retriever
+                    <input type = "radio" name = "Breed" value ="Siamese Cat"/>Siamese Cat
+                    <input type = "radio" name = "Breed" value ="Bulldog"/>Bulldog
+                    <input type = "radio" name = "Breed" value ="Goldendoodle"/>Goldendoodle
+                    <input type = "radio" name = "Breed" value ="Poodle"/>Poodle
+                    <input type = "radio" name = "Breed" value ="Bernedoodle"/>Bernedoodle
+                    <br/><label>Are you looking for any specific age?</label>
+                    <select>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                    <br>How did you hear about us:<br/>
+                    <textarea rows="5" cols="30"></textarea><br/>
+                    <input type = "submit" value = "Submit" /><br/>
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <p>Contact us at: info@happypaws.com | (123) 456-7890</p>
+            <p>&copy; 2025 Happy Paws Pet Adoption Service</p>
+        </footer>
+    </div>
+</body>
+</html>
