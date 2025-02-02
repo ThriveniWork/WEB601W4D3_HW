@@ -26,20 +26,29 @@
                 <h2>If you would love to Adopt</h2>
                 <fieldset>
                     <legend>Please fill out this form</legend>
-                    <label>Enter your full name</label>
+                    <label>Enter your first name</label>
+                    <input type ="text" name = "name" />
+                    <label>Enter your last name</label>
+                    <input type ="text" name = "name" />
+                    <label>Enter your age?</label>
                     <input type ="text" name = "name" />
                     <div class="selectmenu">
                         <label>How should we contact you?</label>  
-                        <select>
-                            <option>Email</option>
-                            <option>Phone</option>
+                        <select id = "contactMethod">
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
                         </select>
+                        <div id="emailField">
+                            <label>Please enter your email</label>
+                            <input type="text" name="email" />
+                        </div>
+                    
+                        <div id="phoneField">
+                            <label>Please enter your phone number</label>
+                            <input type="text" name="phone" />
+                        </div>
                     </div>
-                    <label>Please enter your email</label>
-                    <input type = "text" name = "phone" />
-                    <label>Please enter your phone number</label>
-                    <input type = "text" name = "phone" />
-                    <br><label>What specific breed would you like to adopt?</label>
+                    <label>What specific breed would you like to adopt?</label>
                     <input type = "radio" name = "Breed" value ="Golden Retriever"/>Golden Retriever
                     <input type = "radio" name = "Breed" value ="Siamese Cat"/>Siamese Cat
                     <input type = "radio" name = "Breed" value ="Bulldog"/>Bulldog
@@ -65,5 +74,6 @@
             <p>&copy; 2025 Happy Paws Pet Adoption Service</p>
         </footer>
     </div>
+    <script src ="js/selectbox.js"></script>
 </body>
 </html>
